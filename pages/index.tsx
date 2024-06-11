@@ -1,5 +1,6 @@
 import React from "react";
 import MainComponent from "@/components/shared/MainComponent";
+import AdminComponent from "@/components/shared/AdminComponent";
 import { useRouter } from "next/router";
 
 const Home: React.FC = () => {
@@ -7,9 +8,12 @@ const Home: React.FC = () => {
 
   return (
     <MainComponent>
-      <button onClick={() => router.push('/Auth/Login')}>Login</button>
+      <button onClick={() => router.push("/Auth/Login")}>Login</button>
+      <AdminComponent>
+        <h1>Painel Admin</h1>
+      </AdminComponent>
     </MainComponent>
-  )
-}
+  );
+};
 
 export default Home;
