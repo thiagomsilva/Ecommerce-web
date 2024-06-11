@@ -16,17 +16,32 @@ api.interceptors.response.use(res => {
       uid: res.headers.uid
     };
 
-    api.defaults.headers = apiData;
-    Cookie.set('@api-data', apiData);
+    api.defaults.headers.common['access-token'] = apiData['access-token'];
+    api.defaults.headers.common['client'] = apiData.client;
+    api.defaults.headers.common['expiry'] = apiData.expiry;
+    api.defaults.headers.common['token-type'] = apiData['token-type'];
+    api.defaults.headers.common['uid'] = apiData.uid;
+
+    Cookie.set('@api-data', JSON.stringify(apiData));
   }
 
   return res;
 })
 
 api.interceptors.request.use(req => {
-  if(req.url.includes('admin')) {
-    const apiData: ApiData = JSON.parse(Cookie.get('@api-data'));
-    req.headers = apiData;
+  if(req && req.url && req.url.includes('admin')) {
+    const cookieData = Cookie.get('@api-data');
+    if (cookieData) {
+      const apiData: ApiData = JSON.parse(cookieData);
+      req.headers['access-token'] = apiData['access-token'];
+      req.headers['client'] = apiData.client;
+      req.headers['expiry'] = apiData.expiry;
+      req.headers['token-type'] = apiData['token-type'];
+      req.headers['uid'] = apiData.uid;
+    } else {
+      throw new Error('API data not found in cookies');
+    }
+
   }
 
   return req;
