@@ -31,7 +31,7 @@ const SearchAndIcon: React.FC<SearchAndIcon> = ({ icon, newPath }) => {
   // limpando a pesquisa quando o component for renderizado
   useEffect(() => {
     dispatch(clearSearch());
-  }, []);
+  }, [dispatch]);
 
   // método para realizar a tratativa da pesquisa. Ele irá atualizar o valor da pesquisa no redux
   // esse método será chamado quando o usuário der enter no input de pesquisa ou clicar no ícone da pesquisa
@@ -56,7 +56,7 @@ const SearchAndIcon: React.FC<SearchAndIcon> = ({ icon, newPath }) => {
                 onChange={(evt: React.ChangeEvent<HTMLInputElement>) => {
                   setSearch(evt.target.value);
                 }}
-                onKeyPress={(evt: React.KeyboardEvent<HTMLInputElement>) => {
+                onKeyDown={(evt: React.KeyboardEvent<HTMLInputElement>) => {
                   if (evt.key.toLowerCase() === "enter") {
                     handleSearch();
                   }
