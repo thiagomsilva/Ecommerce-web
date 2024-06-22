@@ -33,7 +33,7 @@ const List: React.FC = () => {
   const { data, error, mutate } = useSWR(url, CategoriesService.index);
 
   // obtenho o estado de pesquisa do redux para observá-lo e a cada mudança mudar o estado local url
-  const search = useSelector((state) => state.search);
+  const search = useSelector((state: any) => state.search);
 
   const dispatch = useDispatch();
   const router = useRouter();
@@ -42,7 +42,7 @@ const List: React.FC = () => {
   // a pesquisa será feita ao alterar o url do SWR
   useEffect(() => {
     setUrl(
-      defaultUrl + UrlService.execute({ page: router.query.page, search })
+      defaultUrl + UrlService.execute({ page: router.query.page ?? "", search })
     );
   }, [search, router.query.page]);
 
