@@ -6,7 +6,7 @@ import StyledButton from "../StyledButton";
 
 interface AdminDeleteModalProps {
   show: boolean;
-  handleClose: (success?: boolean) => void;
+  handleClose: (success: boolean) => void;
   target: String;
 }
 
@@ -18,7 +18,7 @@ const AdminDeleteModal: React.FC<AdminDeleteModalProps> = ({
   return (
     <Modal
       show={show}
-      onHide={handleClose}
+      onHide={() => handleClose(false)}
       className={styles.modal}
       animation={true}
     >
@@ -36,7 +36,7 @@ const AdminDeleteModal: React.FC<AdminDeleteModalProps> = ({
           </Col>
 
           <Col lg={6} xs>
-            <div onClick={() => handleClose(true)}>
+            <div onClick={() => handleClose(false)}>
               <StyledButton
                 icon={faTimes}
                 action={"Cancelar"}
