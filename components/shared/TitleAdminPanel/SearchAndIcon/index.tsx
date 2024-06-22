@@ -79,9 +79,7 @@ const SearchAndIcon: React.FC<SearchAndIcon> = ({ icon, newPath }) => {
 
       <Col lg={2} xs={{ span: 3 }} className={styles.titleButton}>
         <Link href={newPath}>
-          <a>
             <StyledButton icon={icon} type_button="blue" />
-          </a>
         </Link>
       </Col>
     </Row>

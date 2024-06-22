@@ -22,68 +22,54 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
   return (
     <Row className={styles.background}>
       <Col lg={6} xs>
-        <Link legacyBehavior href="/Admin">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin">
+          <FontAwesomeIcon
               icon={faSignal}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="/Admin/Users/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Users/List">
+          <FontAwesomeIcon
               icon={faUser}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="/Admin/Products/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Products/List">
+          <FontAwesomeIcon
               icon={faGamepad}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="/Admin/Categories/List">
-          <a>
+        <Link href="/Admin/Categories/List">
             <FontAwesomeIcon
               icon={faCheckSquare}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="/Admin/SystemRequirements/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/SystemRequirements/List">
+          <FontAwesomeIcon
               icon={faLaptop}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="/Admin/Coupons/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Coupons/List">
+          <FontAwesomeIcon
               icon={faTicketAlt}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
-        <Link legacyBehavior href="#">
-          <a>
-            <FontAwesomeIcon
+        <Link href="#">
+          <FontAwesomeIcon
               icon={faDollarSign}
               color="var(--color-gray-light)"
               className="ml-3"
             />
-          </a>
         </Link>
       </Col>
 

@@ -21,44 +21,37 @@ const LateralMenu: React.FC = () => {
       <Logo />
 
       <div className={styles.list}>
-        <Link legacyBehavior href="/Admin">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin">
+          <FontAwesomeIcon
               icon={faSignal}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Painel Inicial
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/Users/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Users/List">
+          <FontAwesomeIcon
               icon={faUser}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Usuários
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/Products/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Products/List">
+          <FontAwesomeIcon
               icon={faGamepad}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Produtos
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/Categories/List">
-          <a>
+        <Link href="/Admin/Categories/List">
             <FontAwesomeIcon
               icon={faCheckSquare}
               color="var(--color-gray-light)"
@@ -66,55 +59,46 @@ const LateralMenu: React.FC = () => {
             />
             Categorias
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/SystemRequirements/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/SystemRequirements/List">
+          <FontAwesomeIcon
               icon={faLaptop}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Requisitos do sistema
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/Coupons/List">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/Coupons/List">
+          <FontAwesomeIcon
               icon={faTicketAlt}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Cupons
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/#">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/#">
+          <FontAwesomeIcon
               icon={faDollarSign}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Financeiro
             <hr />
-          </a>
         </Link>
 
-        <Link legacyBehavior href="/Admin/#">
-          <a>
-            <FontAwesomeIcon
+        <Link href="/Admin/#">
+          <FontAwesomeIcon
               icon={faSignOutAlt}
               color="var(--color-gray-light)"
               className="mr-3"
             />
             Sair
             <hr />
-          </a>
         </Link>
       </div>
     </div>
