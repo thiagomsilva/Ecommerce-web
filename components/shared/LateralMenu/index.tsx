@@ -25,7 +25,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faSignal}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Painel Inicial
             <hr />
@@ -35,7 +35,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faUser}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Usuários
             <hr />
@@ -45,7 +45,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faGamepad}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Produtos
             <hr />
@@ -55,7 +55,7 @@ const LateralMenu: React.FC = () => {
             <FontAwesomeIcon
               icon={faCheckSquare}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Categorias
             <hr />
@@ -65,7 +65,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faLaptop}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Requisitos do sistema
             <hr />
@@ -75,7 +75,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faTicketAlt}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Cupons
             <hr />
@@ -85,7 +85,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faDollarSign}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Financeiro
             <hr />
@@ -95,7 +95,7 @@ const LateralMenu: React.FC = () => {
           <FontAwesomeIcon
               icon={faSignOutAlt}
               color="var(--color-gray-light)"
-              className="mr-3"
+              className={styles.icon}
             />
             Sair
             <hr />
